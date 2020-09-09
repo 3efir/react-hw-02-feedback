@@ -1,0 +1,19 @@
+.feedback-options {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    &__list-item {
+        list-style-type: none;
+    }
+
+    &__btn {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+}

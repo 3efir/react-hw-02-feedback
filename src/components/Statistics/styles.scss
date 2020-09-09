@@ -1,0 +1,11 @@
+.statistics {
+    &__list {
+        padding: 0;
+    }
+
+    &__list-item {
+        list-style-type: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
