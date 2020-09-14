@@ -12,11 +12,7 @@ class App extends Component {
     bad: 0
   }
 
-  onLeaveFeedback = (key) => {
-    let tempState = this.state;
-    tempState[key] += 1;
-    this.setState(tempState)
-  }
+  handleLeaveFeedback =  (key) => this.setState((state) => ({ [key]: state[key] + 1 }))
 
   getTotal = () => {
     return Object.values(this.state).reduce((acc, current) => acc + current);
@@ -39,7 +35,7 @@ class App extends Component {
         >
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onLeaveFeedback={this.onLeaveFeedback}
+            onLeaveFeedback={this.handleLeaveFeedback}
           />
         </Section>
 

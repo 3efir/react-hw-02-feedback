@@ -4,7 +4,7 @@ import './styles.scss';
 import { v4 as uuidv4 } from 'uuid';
 
 const FeedbackOptions = ({options, onLeaveFeedback}) => {
-  const leaveFeedback = (option) => {
+  const handleLeaveFeedback = (option) => {
     onLeaveFeedback(option);
   };
 
@@ -15,7 +15,7 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
         <li className="feedback-options__list-item" key={uuidv4()}>
           <button
             className="feedback-options__btn"
-            onClick={(e) => leaveFeedback(option)}
+            onClick={(e) => handleLeaveFeedback(option)}
             type="button"
           >{option}</button>
         </li>
